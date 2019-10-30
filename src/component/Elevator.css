@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+.container{
+    background-color: black;
+    display: flex;
+    height : 100vh;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.background {
+    position: fixed; 
+    height: 100%;
+    width : auto;
+    z-index: 100;
+}
+
+.header{
+    height: 10vh;
+    width: 100%;
+    background: brown;
+    text-align: center;
+}
+
+.hideDoors {
+    width: 100%;
+    height : 100vh;
+    display: flex;
+    justify-content:space-between;
+    z-index:50;
+}
+
+.firstHide {
+    width: 25%;
+    height : 100vh;
+    background-color: black;
+    z-index: 50;
+}
+
+.monsters_left{
+    width: 400px;
+    height: auto;
+    margin-top: 330px;
+    margin-right: 500px;
+    position: absolute;
+    z-index: 10;
+    box-shadow: inset -336px -356px 30px black;
+}
+
+.monsters_right{
+    width: 400px;
+    height: auto;
+    margin-top: 330px;
+    margin-left: 500px;
+    position: absolute;
+    z-index: 10;
+    box-shadow: inset -336px -356px 30px black;
+}
+
+
+
+/* -------- test elevator -------------*/
+
+.doors {
+    position: absolute;
+    margin: auto;
+    width: 80vh;
+    height: 100vh;
+}
+
+.sliding-door {
+    position: absolute;
+	width: 50%;
+	height: 100%;
+	border:3px solid rgba(0, 0, 0, 0.7);
+	background-color: #7a1213;
+	background-image: url("../assets/img/texture-door.png");
+	transition: all 1s ease-in-out;
+    box-sizing: border-box;
+    z-index: 20;
+}
+
+.elevatorButton {
+    background-color: black;
+    padding:10px;
+    height:50px;
+    position: absolute;
+    z-index:110;
+}
+
+.left {
+	left: 0;
+}
+.right {
+	right: 0;
+}
+
+.sliding-door.left.opened {
+	left: -40vh;
+	transition: left 2s ease-in-out;
+}
+.sliding-door.right.opened {
+	right: -40vh;
+	transition: right 2s ease-in-out;
+}
