@@ -12,11 +12,6 @@ class Elevator extends React.Component{
         isOpen : false 
     }
 
-    openDoors(){
-        
-        console.log(this.state.isOpen)
-    }
-
 
     getMonsters = () => {
         const randomId=Math.floor(Math.random() * (19))
