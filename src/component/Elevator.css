@@ -107,3 +107,12 @@
 	right: -40vh;
 	transition: right 2s ease-in-out;
 }
+
+/* -------- Description slides -------- */
+
+.description_left {
+    width : 40%;
+    background-color: rgb(255, 0, 0);
+    height : 50vh;
+    z-index : 100;
+}

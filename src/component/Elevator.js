@@ -31,27 +31,34 @@ class Elevator extends React.Component{
         return(
             
             <div className="container"> 
+            <img className="background" src={back}></img>
             <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()}></input>
             <div className = "hideDoors">
                 <div className="firstHide"></div>
                 <div className="firstHide"></div>
             </div>
-                 <div className= "doors">
-                    { this.state.isOpen ?
-                    <div>
-                    <div className="elm sliding-door left opened"></div>
-                    <div className="elm sliding-door right "></div>
-                    <img className="monsters_left" src={this.state.monster} ></img>
-                    </div>
-                    :
-                    <div> 
-                    <div className="elm sliding-door left"></div>
-                    <div className="elm sliding-door right opened"></div>
-                    <img className="monsters_right" src={this.state.monster} ></img>
-                    </div>
-                    } 
+            <>
+                { this.state.isOpen ?
+                <>
+                <div className= "doors">
+                <div className="elm sliding-door left opened"></div>
+                <div className="elm sliding-door right "></div>
+                <img className="monsters_left" src={this.state.monster} ></img> 
                 </div>
-                <img className="background" src={back}></img>     
+                <div className="description_left"> </div>
+                </>
+                    :
+                <>
+                <div className= "doors">
+                <div className="elm sliding-door left"></div>
+                <div className="elm sliding-door right opened"></div>
+                <img className="monsters_right" src={this.state.monster} ></img>
+                </div>
+                <div className="description_right"> </div>
+                </>
+                } 
+                
+            </>     
                 
             </div>
 
