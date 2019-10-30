@@ -1,6 +1,7 @@
 import React from "react"
 import './DatingFeature.css';
 import video from '../assets/Video/videoFirst.mp4'
+import {Link} from 'react-router-dom'
 
 class DatingFeature extends React.Component{
     render(){
@@ -12,11 +13,12 @@ class DatingFeature extends React.Component{
                 <div className="welcome">
                     <h1>ADOPT A MONSTER</h1>
                     <p>Ready to try ?</p>
-                    <input 
+                    <Link 
+                        to='/Elevator' 
                         className="button"
-                        type='button'
-                        value='YES'
-                    />
+                        type='button'>
+                        YES
+                    </Link>
                     <input 
                         className="button"
                         type='button'

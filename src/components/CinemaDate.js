@@ -1,11 +1,12 @@
 import React from "react"
 import './CinemaDate.css';
 import axios from 'axios'
+import Elevator from "../component/Elevator";
 
 
 
 
-class CinemaDate extends React.Component{
+class CinemaDate extends Elevator{
     state={
         movie : [], 
     }

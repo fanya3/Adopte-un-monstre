@@ -2,8 +2,8 @@ import React from "react"
 import './Elevator.css';
 import back from '../assets/img/elevator-opened.png'
 import axios from 'axios'
-import CinemaDate from '../components/CinemaDate'
-
+import {Link} from 'react-router-dom'
+import {withRouter} from 'react-router-dom'
 
 
 
@@ -24,9 +24,14 @@ class Elevator extends React.Component{
     })
          }
 
-         componentWillMount(){
+         componentDidMount(){
             this.getMonsters()
          }
+    inlove = () => {
+        const monster = this.state.monster;
+        monster.push('/CinemaDate')
+    }
+    
 
     render(){
         return(
@@ -60,13 +65,13 @@ class Elevator extends React.Component{
                 } 
                 
             </>     
-            <input type='button' className="INLOVE" onClick={()=> this.getMonsters()}></input>
+            
+            
+            <input  className="inLove" type="button" onClick={()=> this.inlove()}/>
 
-            <CinemaDate
-            monster = {this.state.monster}/>
             </div>
                 
         )
     }
 }
-export default Elevator
+export default withRouter(Elevator)
