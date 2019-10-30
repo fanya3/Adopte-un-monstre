@@ -24,6 +24,7 @@ class CinemaDate extends React.Component{
          }
 
     render(){
+        console.log(this.props.monster)
         return(
             
             <div className="cinema-ticket"> 
