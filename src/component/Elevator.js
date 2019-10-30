@@ -2,6 +2,7 @@ import React from "react"
 import './Elevator.css';
 import back from '../assets/img/elevator-opened.png'
 import axios from 'axios'
+import CinemaDate from './CinemaDate'
 
 
 
@@ -59,9 +60,11 @@ class Elevator extends React.Component{
                 } 
                 
             </>     
-                
-            </div>
+            <input type='button' className="INLOVE" onClick={()=> this.getMonsters()}></input>
 
+            <CinemaDate
+            monster = {this.state.monster}/>
+            </div>
                 
         )
     }
