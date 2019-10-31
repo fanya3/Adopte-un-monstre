@@ -40,31 +40,31 @@ class Elevator extends React.Component{
         console.log('je montre state global', this.props)
         return(
             
-            <div className="container"> 
-                <img className="background" src={back}></img>
+            <div className="elevator-container"> 
+                <img className="elevator-background" src={back}></img>
                 <div className="text-intro">
                     <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
 
-                <div className = "hideDoors">
-                    <div className="firstHide"></div>
-                    <div className="firstHide"></div>
+                <div className = "elevator-hideDoors">
+                    <div className="elevator-firstHide"></div>
+                    <div className="elevator-firstHide"></div>
                 </div>
-                <div className = "hideBackground">
-                    <div className="BgHide"></div>
-                    <div className="BgHide"></div>
+                <div className = "elevator-hideBackground">
+                    <div className="elevator-BgHide"></div>
+                    <div className="elevator-BgHide"></div>
                 </div>
                 
                 <>
                     { this.state.isOpen ?
                     <>
-                    <div className= "doors">
+                    <div className= "elevator-doors">
                         <div className="elm sliding-door left opened"></div>
                         <div className="elm sliding-door right "></div>
-                        <img className="monsters_left" src={this.state.monster.picture} ></img> 
+                        <img className="elevator-monsters-left" src={this.state.monster.picture} ></img> 
                     </div>
-                    <div className="description_left">
+                    <div className="elevator-description-left">
                         <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
@@ -86,12 +86,12 @@ class Elevator extends React.Component{
                     </>
                         :
                     <>
-                    <div className= "doors">
+                    <div className= "elevator-doors">
                         <div className="elm sliding-door left"></div>
                         <div className="elm sliding-door right opened"></div>
-                        <img className="monsters_right" src={this.state.monster.picture} ></img>
+                        <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
                     </div>
-                    <div className="description_right">
+                    <div className="elevator-description-right">
                     <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">

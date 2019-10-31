@@ -4,7 +4,7 @@
     margin: 0;
     
 }
-.container{
+.elevator-container{
     background-color: black;
     display: flex;
     width: 100%;
@@ -13,7 +13,7 @@
     overflow: hidden;
 }
 
-.background {
+.elevator-background {
     position: fixed; 
     height: 102%;
     width : auto;
@@ -21,7 +21,7 @@
     filter: drop-shadow(10px 10px 8px #000000);
 }
 
-.hideDoors {
+.elevator-hideDoors {
     width: 100%;
     height : 100vh;
     display: flex;
@@ -30,14 +30,14 @@
 }
 
 
-.firstHide {
+.elevator-firstHide {
     width: 25%;
     height : 100vh;
     background-color: black;
     z-index: 50;
 }
 
-.hideBackground {
+.elevator-hideBackground {
     width: 100%;
     height : 112vh;
     display: flex;
@@ -49,7 +49,7 @@
 }
 
 
-.BgHide {
+.elevator-BgHide {
     width: 19%;
     height : 200vh;
     background-color:#0f0e0e;
@@ -88,7 +88,7 @@
 }
 
 
-.monsters_left{
+.elevator-monsters-left{
     width: auto;
     height:420px;
     margin-top: 26vh;
@@ -98,7 +98,7 @@
     box-shadow: inset -336px -356px 30px black;
 }
 
-.monsters_right{
+.elevator-monsters-right{
     width: auto;
     height: 420px;
     margin-top: 26vh;
@@ -112,7 +112,7 @@
 
 /* -------- test elevator -------------*/
 
-.doors {
+.elevator-doors {
     position: absolute;
     margin: auto;
     width: 80vh;
@@ -156,7 +156,7 @@
 
 /* -------- Description slides -------- */
 
-.description_left {
+.elevator-description-left {
     position : absolute;
     display: flex;
     flex-direction: column;
@@ -173,7 +173,7 @@
     top : 17vh;
 }
 
-.description_right {
+.elevator-description-right {
     position : absolute;
     display: flex;
     flex-direction: column;
@@ -190,12 +190,12 @@
     top : 17vh;
 }
 
-.description_left h1, .description_right h1 {
+.elevator-description-left h1, .elevator-description-right h1 {
     font-size : 40px;
 }
 
 
-.description_left p,.description_right p{
+.elevator-description-left p, .elevator-description-right p{
  font-size:16px;
  margin:0
 }
