@@ -41,43 +41,46 @@ class Elevator extends React.Component{
         return(
             
             <div className="container"> 
-            <img className="background" src={back}></img>
-            <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()}></input>
-            <div className = "hideDoors">
-                <div className="firstHide"></div>
-                <div className="firstHide"></div>
-            </div>
-            <>
-                { this.state.isOpen ?
-                <>
-                <div className= "doors">
-                <div className="elm sliding-door left opened"></div>
-                <div className="elm sliding-door right "></div>
-                <img className="monsters_left" src={this.state.monster.picture} ></img> 
+                <img className="background" src={back}></img>
+                <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
+                <div className="text-intro">
+                    <h3> Click on the button to find your soul mate!</h3>
                 </div>
-                <div className="description_left"> </div>
-                </>
-                    :
-                <>
-                <div className= "doors">
-                <div className="elm sliding-door left"></div>
-                <div className="elm sliding-door right opened"></div>
-                <img className="monsters_right" src={this.state.monster.picture} ></img>
+
+                <div className = "hideDoors">
+                    <div className="firstHide"></div>
+                    <div className="firstHide"></div>
                 </div>
-                <div className="description_right"> </div>
-                </>
-                } 
                 
-            </>     
-            
-            
-            <Link 
-                onClick = {() => this._userArray()}
-                to='/CinemaDate' 
-                className="inLove"
-                type='button'>
-                    MATCH
-            </Link>
+                <>
+                    { this.state.isOpen ?
+                    <>
+                    <div className= "doors">
+                    <div className="elm sliding-door left opened"></div>
+                    <div className="elm sliding-door right "></div>
+                    <img className="monsters_left" src={this.state.monster.picture} ></img> 
+                    </div>
+                    </>
+                        :
+                    <>
+                    <div className= "doors">
+                    <div className="elm sliding-door left"></div>
+                    <div className="elm sliding-door right opened"></div>
+                    <img className="monsters_right" src={this.state.monster.picture} ></img>
+                    </div>
+                    </>
+                    } 
+                    
+                </>     
+                
+                
+                <Link 
+                    onClick = {() => this._userArray()}
+                    to='/CinemaDate' 
+                    className="inLove"
+                    type='button'>
+                        MATCH
+                </Link>
 
             </div>
                 

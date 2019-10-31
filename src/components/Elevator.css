@@ -7,6 +7,7 @@
 .container{
     background-color: black;
     display: flex;
+    width: 100%;
     height : 100vh;
     justify-content: center;
     overflow: hidden;
@@ -14,16 +15,9 @@
 
 .background {
     position: fixed; 
-    height: 100%;
+    height: 102%;
     width : auto;
     z-index: 100;
-}
-
-.header{
-    height: 10vh;
-    width: 100%;
-    background: brown;
-    text-align: center;
 }
 
 .hideDoors {
@@ -34,6 +28,18 @@
     z-index:50;
 }
 
+.text-intro {
+    position:absolute;
+    width:50%;
+    height:90px;
+    margin:auto;
+    bottom: 8vh;
+    z-index:180;
+    color: #7a1213;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
 .firstHide {
     width: 25%;
     height : 100vh;
@@ -41,21 +47,24 @@
     z-index: 50;
 }
 
+h3{
+    line-height: 90px;
+}
 .monsters_left{
-    width: 400px;
-    height: auto;
-    margin-top: 330px;
-    margin-right: 500px;
+    width: auto;
+    height:420px;
+    margin-top: 26vh;
+    margin-right: 15vw;
     position: absolute;
     z-index: 10;
     box-shadow: inset -336px -356px 30px black;
 }
 
 .monsters_right{
-    width: 400px;
-    height: auto;
-    margin-top: 330px;
-    margin-left: 500px;
+    width: auto;
+    height: 420px;
+    margin-top: 26vh;
+    margin-left: 22vw;
     position: absolute;
     z-index: 10;
     box-shadow: inset -336px -356px 30px black;
@@ -84,11 +93,13 @@
     z-index: 20;
 }
 
+
 .elevatorButton {
-    background-color: black;
-    padding:10px;
-    height:50px;
+    height:3em;
+    width:5em;
     position: absolute;
+    top:49.5vh;
+    left:46.3vw;
     z-index:110;
 }
 .inLove {
