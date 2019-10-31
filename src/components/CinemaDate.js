@@ -6,7 +6,7 @@ import Monster from '../assets/img/monster.jpg'
 import Ticket from '../assets/img/téléchargement.png'
 import Stamp from '../assets/img/Untitled-1.png'
 import { connect } from 'react-redux'
-import audio from '../assets/Audio/adopt.mp3'
+import audio from '../assets/Audio/inLove.mp3'
 
 
 const mapStateToProps = (state) => {
