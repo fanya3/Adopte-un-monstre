@@ -1,5 +1,5 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -16,6 +16,9 @@ video {
     z-index: -100;
   }
 
+.mainContainer {
+    height: 100vh;
+}
 
 .welcome {
     background-color: rgba(0, 0, 0, 0.85);
@@ -24,25 +27,26 @@ video {
     margin: 20vh auto;
     border-radius: 5px;
     text-align: center;
-    padding: 50px;
+    padding: 5%;
     color: white;
-    font-size: 50px;
+    font-size: 3em;
 }
 
-.button {
-    width: 20vw;
-    text-decoration: none;
+p{
+    margin-top: 2.5vw;
+}
+
+.button{
     height: 3em;
-    margin-right: 1em;
-    margin-top: 30vw;
     background-color: rgb(146, 10, 10);
     color: black;
     font-size: 0.5em;
     border: none;
-    padding: 0.7em 2.7em;
+    padding: 1em;
+    margin-top:2em;
 }
 
-.button:hover {
+.button:hover{
     background-color: black;
-    color:rgb(146, 10, 10);
+    color: rgb(146, 10, 10);
 }

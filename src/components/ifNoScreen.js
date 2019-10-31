@@ -1,9 +1,11 @@
 import React from "react"
-import './DatingFeature.css';
+import './ifNoScreen.css';
 import video from '../assets/Video/videoFirst.mp4'
 import {Link} from 'react-router-dom'
 
-class DatingFeature extends React.Component{
+
+
+class ScreenNo extends React.Component{
     render(){
         return(
             <div>
@@ -11,23 +13,18 @@ class DatingFeature extends React.Component{
                     <source src={video} type="video/mp4"></source>
                 </video>
                 <div className="welcome">
-                    <h1>ADOPT A MONSTER</h1>
-                    <p>Ready to try ?</p>
-                    <Link 
-                        to='/Elevator' 
-                        className="button"
-                        type='button'>
-                        YES
-                    </Link>
+                    <h1>What a pity !</h1>
+                    <p>We had a great monster to introduce you !</p>
                     <Link
-                        to='/ifNoScreen'
+                        to='/Elevator'
                         className="button"
                         type='button'>
-                        NO
+                        You changed your mind ?
                     </Link>
                 </div>
+
             </div>
         )
     }
 }
-export default DatingFeature
+export default ScreenNo;
