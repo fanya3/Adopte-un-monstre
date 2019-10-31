@@ -4,6 +4,9 @@ import back from '../assets/img/elevator-opened-ok.png'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
+import audio from '../assets/Audio/elevator.mp3';
+
+
 
 const mapStateToProps = (state) => {
     return state  
@@ -16,6 +19,8 @@ class Elevator extends React.Component{
     }
 
 
+
+
     getMonsters = () => {
         const randomId=Math.floor(Math.random() * (19))
         axios.get(`https://hackathon-wild-hackoween.herokuapp.com/monsters`)
@@ -24,7 +29,9 @@ class Elevator extends React.Component{
         setTimeout(() => {
             this.setState({monster: data.monsters[randomId]})
         }, 600);
-        this.setState({isOpen : !this.state.isOpen})
+        this.setState({isOpen : !this.state.isOpen});
+        const son = new Audio(audio); return (son.play());
+
     })
          }
          _userArray() {
@@ -32,20 +39,16 @@ class Elevator extends React.Component{
             this.props.dispatch(action)
         }
 
-         componentDidMount(){
-            this.getMonsters()
-         }
-         
+
     
 
-    render(){
-        console.log('je montre state global', this.props)
+    render(){      
         return(
             
             <div className="elevator-container"> 
                 <img className="elevator-background" src={back}></img>
                 <div className="text-intro">
-                    <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
+                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters()} value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
 
