@@ -42,8 +42,8 @@ class Elevator extends React.Component{
             
             <div className="container"> 
                 <img className="background" src={back}></img>
-                <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
                 <div className="text-intro">
+                    <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
 
@@ -56,31 +56,62 @@ class Elevator extends React.Component{
                     { this.state.isOpen ?
                     <>
                     <div className= "doors">
-                    <div className="elm sliding-door left opened"></div>
-                    <div className="elm sliding-door right "></div>
-                    <img className="monsters_left" src={this.state.monster.picture} ></img> 
+                        <div className="elm sliding-door left opened"></div>
+                        <div className="elm sliding-door right "></div>
+                        <img className="monsters_left" src={this.state.monster.picture} ></img> 
+                    </div>
+                    <div className="description_left">
+                        <p>Your potential soulmate:</p>
+                        <h1>{this.state.monster.name}</h1>
+                        <div className="sexAppeal">
+                            <h3>His level of sex appeal :</h3> 
+                            <h1>{this.state.monster.level}</h1>
+                        </div>
+                        <div className="sexAppeal">
+                            <h3>Here, you will understand why he's the one for you :</h3>
+                            <p>{this.state.monster.description}</p>
+                        </div>
+                        <Link 
+                            onClick = {() => this._userArray()}
+                            to='/CinemaDate' 
+                            className="button-match"
+                            type='button'>
+                                IN LOVE?
+                        </Link>
                     </div>
                     </>
                         :
                     <>
                     <div className= "doors">
-                    <div className="elm sliding-door left"></div>
-                    <div className="elm sliding-door right opened"></div>
-                    <img className="monsters_right" src={this.state.monster.picture} ></img>
+                        <div className="elm sliding-door left"></div>
+                        <div className="elm sliding-door right opened"></div>
+                        <img className="monsters_right" src={this.state.monster.picture} ></img>
+                    </div>
+                    <div className="description_right">
+                    <p>Your potential soulmate:</p>
+                        <h1>{this.state.monster.name}</h1>
+                        <div className="sexAppeal">
+                            <h3>His level of sex appeal :</h3> 
+                            <h1>{this.state.monster.level}</h1>
+                        </div>
+                        <div className="sexAppeal">
+                            <h3>Here, you will understand why he's the one for you :</h3>
+                            <p>{this.state.monster.description}</p>
+                        </div>
+                        <Link 
+                            onClick = {() => this._userArray()}
+                            to='/CinemaDate' 
+                            className="button-match"
+                            type='button'>
+                                IN LOVE?
+                        </Link>
                     </div>
                     </>
                     } 
                     
                 </>     
                 
-                
-                <Link 
-                    onClick = {() => this._userArray()}
-                    to='/CinemaDate' 
-                    className="inLove"
-                    type='button'>
-                        MATCH
-                </Link>
+                    
 
             </div>
                 

@@ -18,6 +18,7 @@
     height: 102%;
     width : auto;
     z-index: 100;
+    filter: drop-shadow(10px 10px 8px #000000);
 }
 
 .hideDoors {
@@ -28,17 +29,6 @@
     z-index:50;
 }
 
-.text-intro {
-    position:absolute;
-    width:50%;
-    height:90px;
-    margin:auto;
-    bottom: 8vh;
-    z-index:180;
-    color: #7a1213;
-    text-align: center;
-    background-color: rgba(0,0,0,0.7);
-}
 
 .firstHide {
     width: 25%;
@@ -47,9 +37,37 @@
     z-index: 50;
 }
 
-h3{
-    line-height: 90px;
+
+.text-intro {
+    position:absolute;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width:30%;
+    height:130px;
+    margin:auto;
+    bottom: 4vh;
+    z-index:180;
+    color: #7a1213;
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+    padding:1em;
 }
+ 
+.elevatorButton {
+    height:3em;
+    width:7em;
+    z-index:110;
+    margin: 10px auto 20px auto;
+    background-color: #7a1213;
+    color:black;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+
 .monsters_left{
     width: auto;
     height:420px;
@@ -94,22 +112,6 @@ h3{
 }
 
 
-.elevatorButton {
-    height:3em;
-    width:5em;
-    position: absolute;
-    top:49.5vh;
-    left:46.3vw;
-    z-index:110;
-}
-.inLove {
-    background-color: black;
-    margin-top:40px;
-    padding:10px;
-    height:50px;
-    position: absolute;
-    z-index:110;
-}
 
 .left {
 	left: 0;
@@ -127,11 +129,75 @@ h3{
 	transition: right 2s ease-in-out;
 }
 
+
+
+
+
+
 /* -------- Description slides -------- */
 
 .description_left {
-    width : 40%;
-    background-color: rgb(255, 0, 0);
-    height : 50vh;
-    z-index : 100;
+    position : absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+    background-color: rgba(0, 0, 0, 0.7);
+    width : 20%;
+    z-index: 150;
+    text-align: center;
+    border-radius : 5px;
+    color: #7a1213;
+    padding: 25px 18px 25px 18px ;
+    right : 17vh;
+    top : 17vh;
+}
+
+.description_right {
+    position : absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+    background-color: rgba(0, 0, 0, 0.7);
+    width : 20%;
+    z-index: 150;
+    text-align: center;
+    border-radius : 5px;
+    color: #7a1213;
+    padding: 25px 18px 25px 18px ;
+    left : 16vh;
+    top : 17vh;
+}
+
+.description_left h1, .description_right h1 {
+    font-size : 40px;
+}
+
+
+.description_left p,.description_right p{
+ font-size:16px;
+ margin:0
+}
+
+.sexAppeal {
+    margin-top:2em;
+
+}
+
+
+.button-match {
+    background-color: white;
+    margin:auto;
+    margin-top:1em;
+    text-decoration: none;
+    padding:10px;
+    width:60%;
+    z-index:110;
+    color:black;
+    font-size:1.5em;
+}
+
+.button-match:hover {
+    background-color:#7a1213;
 }
