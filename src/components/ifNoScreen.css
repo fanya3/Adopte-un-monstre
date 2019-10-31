@@ -23,7 +23,7 @@ video {
 .welcome {
     background-color: rgba(0, 0, 0, 0.85);
     width: 60%;
-    height: 60vh;
+    height: auto;
     margin: 20vh auto;
     border-radius: 5px;
     text-align: center;
@@ -36,18 +36,17 @@ p{
     margin-top: 2.5vw;
 }
 
-input{
-    width: 20vw;
+.button{
     height: 3em;
-    margin-right: 1em;
-    margin-top: 5vw;
     background-color: rgb(146, 10, 10);
     color: black;
     font-size: 0.5em;
     border: none;
+    padding: 1em;
+    margin-top:2em;
 }
 
-input:hover{
+.button:hover{
     background-color: black;
     color: rgb(146, 10, 10);
 }

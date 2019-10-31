@@ -1,6 +1,9 @@
 import React from "react"
 import './ifNoScreen.css';
 import video from '../assets/Video/videoFirst.mp4'
+import {Link} from 'react-router-dom'
+
+
 
 class ScreenNo extends React.Component{
     render(){
@@ -12,11 +15,12 @@ class ScreenNo extends React.Component{
                 <div className="welcome">
                     <h1>What a pity !</h1>
                     <p>We had a great monster to introduce you !</p>
-                    <input 
+                    <Link
+                        to='/Elevator'
                         className="button"
-                        type='button'
-                        value='You changed your mind ?'
-                    />
+                        type='button'>
+                        You changed your mind ?
+                    </Link>
                 </div>
 
             </div>
