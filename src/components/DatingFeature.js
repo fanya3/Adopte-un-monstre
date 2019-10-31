@@ -11,7 +11,7 @@ class DatingFeature extends React.Component{
                     <source src={video} type="video/mp4"></source>
                 </video>
                 <div className="welcome">
-                    <h1>ADOPT A MONSTER</h1>
+                <h1 className="text middle" data-text="adopt a monster">ADOPT A MONSTER</h1>
                     <p>Ready to try ?</p>
                     <div className="choice">
                         <Link 

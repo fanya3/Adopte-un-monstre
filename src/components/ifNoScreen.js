@@ -13,7 +13,7 @@ class ScreenNo extends React.Component{
                     <source src={video} type="video/mp4"></source>
                 </video>
                 <div className="welcome">
-                    <h1>What a pity !</h1>
+                    <h1>WHAT A PITY !</h1>
                     <p>We had a great monster to introduce to you !</p>
                     <div className="choice-back">
                         <Link

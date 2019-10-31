@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+@import url( "https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica&display=swap" );
 
 video {
     background-size: cover;
@@ -30,6 +31,7 @@ video {
     padding: 5%;
     color: white;
     font-size: 3em;
+    font-family: 'IM Fell DW Pica', serif;
 }
 
 p{
