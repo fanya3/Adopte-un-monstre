@@ -1,6 +1,6 @@
 import React from "react"
 import './Elevator.css';
-import back from '../assets/img/elevator-opened.png'
+import back from '../assets/img/elevator-opened-ok.png'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
@@ -40,44 +40,82 @@ class Elevator extends React.Component{
         console.log('je montre state global', this.props)
         return(
             
-            <div className="container"> 
-            <img className="background" src={back}></img>
-            <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()}></input>
-            <div className = "hideDoors">
-                <div className="firstHide"></div>
-                <div className="firstHide"></div>
-            </div>
-            <>
-                { this.state.isOpen ?
-                <>
-                <div className= "doors">
-                <div className="elm sliding-door left opened"></div>
-                <div className="elm sliding-door right "></div>
-                <img className="monsters_left" src={this.state.monster.picture} ></img> 
+            <div className="elevator-container"> 
+                <img className="elevator-background" src={back}></img>
+                <div className="text-intro">
+                    <input type='button' className="elevatorButton" onClick={()=> this.getMonsters()} value="NEXT"></input>
+                    <h3> Click on the button to find your soul mate!</h3>
                 </div>
-                <div className="description_left"> </div>
-                </>
-                    :
-                <>
-                <div className= "doors">
-                <div className="elm sliding-door left"></div>
-                <div className="elm sliding-door right opened"></div>
-                <img className="monsters_right" src={this.state.monster.picture} ></img>
+
+                <div className = "elevator-hideDoors">
+                    <div className="elevator-firstHide"></div>
+                    <div className="elevator-firstHide"></div>
                 </div>
-                <div className="description_right"> </div>
-                </>
-                } 
+                <div className = "elevator-hideBackground">
+                    <div className="elevator-BgHide"></div>
+                    <div className="elevator-BgHide"></div>
+                </div>
                 
-            </>     
-            
-            
-            <Link 
-                onClick = {() => this._userArray()}
-                to='/CinemaDate' 
-                className="inLove"
-                type='button'>
-                    MATCH
-            </Link>
+                <>
+                    { this.state.isOpen ?
+                    <>
+                    <div className= "elevator-doors">
+                        <div className="elm sliding-door left opened"></div>
+                        <div className="elm sliding-door right "></div>
+                        <img className="elevator-monsters-left" src={this.state.monster.picture} ></img> 
+                    </div>
+                    <div className="elevator-description-left">
+                        <p>Your potential soulmate:</p>
+                        <h1>{this.state.monster.name}</h1>
+                        <div className="sexAppeal">
+                            <h3>His level of sex appeal :</h3> 
+                            <h1>{this.state.monster.level}</h1>
+                        </div>
+                        <div className="sexAppeal">
+                            <h3>Here, you will understand why he's the one for you :</h3>
+                            <p>{this.state.monster.description}</p>
+                        </div>
+                        <Link 
+                            onClick = {() => this._userArray()}
+                            to='/CinemaDate' 
+                            className="button-match"
+                            type='button'>
+                                IN LOVE?
+                        </Link>
+                    </div>
+                    </>
+                        :
+                    <>
+                    <div className= "elevator-doors">
+                        <div className="elm sliding-door left"></div>
+                        <div className="elm sliding-door right opened"></div>
+                        <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
+                    </div>
+                    <div className="elevator-description-right">
+                    <p>Your potential soulmate:</p>
+                        <h1>{this.state.monster.name}</h1>
+                        <div className="sexAppeal">
+                            <h3>His level of sex appeal :</h3> 
+                            <h1>{this.state.monster.level}</h1>
+                        </div>
+                        <div className="sexAppeal">
+                            <h3>Here, you will understand why he's the one for you :</h3>
+                            <p>{this.state.monster.description}</p>
+                        </div>
+                        <Link 
+                            onClick = {() => this._userArray()}
+                            to='/CinemaDate' 
+                            className="button-match"
+                            type='button'>
+                                IN LOVE?
+                        </Link>
+                    </div>
+                    </>
+                    } 
+                    
+                </>     
+                
+                    
 
             </div>
                 
