@@ -1,8 +1,8 @@
 import React from 'react';
 import CinemaDate from './components/CinemaDate'
 import './App.css';
-import DatingFeature from "./component/DatingFeature"
-import Elevator from './component/Elevator';
+import DatingFeature from "./components/DatingFeature"
+import Elevator from './components/Elevator';
 import {Switch, Route} from 'react-router-dom'
 import { Provider } from 'react-redux';
 import store from './Store/store';
