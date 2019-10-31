@@ -39,6 +39,6 @@ class CinemaDate extends React.Component{
 
                 
         )
-    }
+    } 
 }
 export default connect(mapStateToProps)(CinemaDate)
