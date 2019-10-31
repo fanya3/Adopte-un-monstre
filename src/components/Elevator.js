@@ -55,7 +55,6 @@ class Elevator extends React.Component{
                 <div className="elm sliding-door right "></div>
                 <img className="monsters_left" src={this.state.monster.picture} ></img> 
                 </div>
-                <div className="description_left"> </div>
                 </>
                     :
                 <>
@@ -64,7 +63,6 @@ class Elevator extends React.Component{
                 <div className="elm sliding-door right opened"></div>
                 <img className="monsters_right" src={this.state.monster.picture} ></img>
                 </div>
-                <div className="description_right"> </div>
                 </>
                 } 
                 
