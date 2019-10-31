@@ -10,7 +10,7 @@ class DatingFeature extends React.Component {
             <div>
                 <audio autoPlay loop >
                     {console.log('joué')}
-                    <source src={audio} type="audio"></source>
+                    <source src={audio} type="audio/mp3"></source>
                 </audio>
                 <video autoPlay loop muted >
                     <source src={video} type="video/mp4"></source>
