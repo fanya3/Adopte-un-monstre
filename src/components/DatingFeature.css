@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: content-box;
     padding: 0;
     margin: 0;
 }
@@ -16,31 +16,30 @@ video {
     z-index: -100;
   }
 
-.mainContainer {
-    height: 100vh;
-}
 
 .welcome {
     background-color: rgba(0, 0, 0, 0.85);
     width: 60%;
-    height: 60vh;
+    height: auto;
     margin: 20vh auto;
     border-radius: 5px;
     text-align: center;
-    padding: 5%;
+    padding: 50px;
     color: white;
     font-size: 50px;
 }
 
 .button {
     width: 20vw;
+    text-decoration: none;
     height: 3em;
     margin-right: 1em;
-    margin-top: 5vw;
+    margin-top: 30vw;
     background-color: rgb(146, 10, 10);
     color: black;
     font-size: 0.5em;
     border: none;
+    padding: 0.7em 2.7em;
 }
 
 .button:hover {

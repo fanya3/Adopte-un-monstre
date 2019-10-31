@@ -19,13 +19,13 @@ class DatingFeature extends React.Component{
                         type='button'>
                         YES
                     </Link>
-                    <input 
+                    <Link
+                        to='/ifNoScreen'
                         className="button"
-                        type='button'
-                        value='NO'
-                    />
+                        type='button'>
+                        NO
+                    </Link>
                 </div>
-
             </div>
         )
     }
