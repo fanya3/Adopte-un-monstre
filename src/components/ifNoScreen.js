@@ -10,12 +10,12 @@ class ScreenNo extends React.Component{
     render(){
         return(
             <div>
+                <audio autoPlay loop>
+                    <source src={audio} type="audio/mp3"></source>
+                </audio>
                 <video autoPlay loop muted >
                     <source src={video} type="video/mp4"></source>
                 </video>
-                <audio autoPlay loop>
-                            <source src={audio} typ="audio/mp3"></source>
-                        </audio>
                 <div className="welcome">
                     <h1>WHAT A PITY !</h1>
                     <p>We had a great monster to introduce to you !</p>
