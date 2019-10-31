@@ -37,6 +37,26 @@
     z-index: 50;
 }
 
+.hideBackground {
+    width: 100%;
+    height : 112vh;
+    display: flex;
+    justify-content:space-between;
+    z-index:110;
+    position:absolute;
+    overflow: hidden;
+    top:-12vh;
+}
+
+
+.BgHide {
+    width: 19%;
+    height : 200vh;
+    background-color:#0f0e0e;
+    z-index: 110;
+    filter: blur(3rem);
+}
+
 
 .text-intro {
     position:absolute;

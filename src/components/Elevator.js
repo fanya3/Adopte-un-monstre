@@ -1,6 +1,6 @@
 import React from "react"
 import './Elevator.css';
-import back from '../assets/img/elevator-opened.png'
+import back from '../assets/img/elevator-opened-ok.png'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
 import {connect} from 'react-redux'
@@ -50,6 +50,10 @@ class Elevator extends React.Component{
                 <div className = "hideDoors">
                     <div className="firstHide"></div>
                     <div className="firstHide"></div>
+                </div>
+                <div className = "hideBackground">
+                    <div className="BgHide"></div>
+                    <div className="BgHide"></div>
                 </div>
                 
                 <>
