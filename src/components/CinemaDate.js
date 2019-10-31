@@ -44,6 +44,10 @@ class CinemaDate extends React.Component{
         return(
         <>{this.state.isDisplayed ?
         <div className = "video_container">
+            <div className = "elevator-hideBackground">
+                <div className="elevator-BgHide"></div>
+                <div className="elevator-BgHide"></div>
+            </div>
             <video autoPlay muted className="video_shining">
                 <source src={video} type="video/mp4"></source>
             </video>

@@ -21,7 +21,9 @@ class Elevator extends React.Component{
         axios.get(`https://hackathon-wild-hackoween.herokuapp.com/monsters`)
         .then(response => response.data)
         .then(data => {console.log("test Api", data) || 
-        this.setState({monster: data.monsters[randomId]})
+        setTimeout(() => {
+            this.setState({monster: data.monsters[randomId]})
+        }, 600);
         this.setState({isOpen : !this.state.isOpen})
     })
          }
