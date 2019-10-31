@@ -1,12 +1,14 @@
 import React from "react"
 import './CinemaDate.css';
 import axios from 'axios'
-import Elevator from "../component/Elevator";
+import {connect} from 'react-redux'
 
 
+const mapStateToProps = (state) => {
+    return state  
+  }
 
-
-class CinemaDate extends Elevator{
+class CinemaDate extends React.Component{
     state={
         movie : [], 
     }
@@ -25,12 +27,13 @@ class CinemaDate extends Elevator{
          }
 
     render(){
-        console.log(this.props.monster)
+        console.log('props', this.props)
         return(
             
             <div className="cinema-ticket"> 
             <h3>{this.state.movie.title}</h3>
-            <h3>{this.props.monster}</h3>
+            <h3>{this.props.monster.name}</h3>
+            <img src = {this.props.monster.picture}></img>
             <img className="movie" src={this.state.movie.posterUrl} alt={this.state.movie.title}></img>
             </div>
 
@@ -38,4 +41,4 @@ class CinemaDate extends Elevator{
         )
     }
 }
-export default CinemaDate
+export default connect(mapStateToProps)(CinemaDate)

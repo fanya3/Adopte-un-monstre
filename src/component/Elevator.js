@@ -3,9 +3,11 @@ import './Elevator.css';
 import back from '../assets/img/elevator-opened.png'
 import axios from 'axios'
 import {Link} from 'react-router-dom'
-import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
 
-
+const mapStateToProps = (state) => {
+    return state  
+  }
 
 class Elevator extends React.Component{
     state={
@@ -19,21 +21,23 @@ class Elevator extends React.Component{
         axios.get(`https://hackathon-wild-hackoween.herokuapp.com/monsters`)
         .then(response => response.data)
         .then(data => {console.log("test Api", data) || 
-        this.setState({monster: data.monsters[randomId].picture})
+        this.setState({monster: data.monsters[randomId]})
         this.setState({isOpen : !this.state.isOpen})
     })
          }
+         _userArray() {
+            const action = { type : "USER_LOADED", value : this.state.monster}
+            this.props.dispatch(action)
+        }
 
          componentDidMount(){
             this.getMonsters()
          }
-    inlove = () => {
-        const monster = this.state.monster;
-        monster.push('/CinemaDate')
-    }
+         
     
 
     render(){
+        console.log('je montre state global', this.props)
         return(
             
             <div className="container"> 
@@ -49,7 +53,7 @@ class Elevator extends React.Component{
                 <div className= "doors">
                 <div className="elm sliding-door left opened"></div>
                 <div className="elm sliding-door right "></div>
-                <img className="monsters_left" src={this.state.monster} ></img> 
+                <img className="monsters_left" src={this.state.monster.picture} ></img> 
                 </div>
                 <div className="description_left"> </div>
                 </>
@@ -58,7 +62,7 @@ class Elevator extends React.Component{
                 <div className= "doors">
                 <div className="elm sliding-door left"></div>
                 <div className="elm sliding-door right opened"></div>
-                <img className="monsters_right" src={this.state.monster} ></img>
+                <img className="monsters_right" src={this.state.monster.picture} ></img>
                 </div>
                 <div className="description_right"> </div>
                 </>
@@ -67,11 +71,17 @@ class Elevator extends React.Component{
             </>     
             
             
-            <input  className="inLove" type="button" onClick={()=> this.inlove()}/>
+            <Link 
+                onClick = {() => this._userArray()}
+                to='/CinemaDate' 
+                className="inLove"
+                type='button'>
+                    MATCH
+            </Link>
 
             </div>
                 
         )
     }
 }
-export default withRouter(Elevator)
+export default connect(mapStateToProps)(Elevator);
