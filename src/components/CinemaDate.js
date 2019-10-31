@@ -1,6 +1,10 @@
 import React from "react"
 import './CinemaDate.css';
 import axios from 'axios'
+import video from '../assets/Video/test_4.mov'
+import Monster from '../assets/img/monster.jpg'
+import Ticket from '../assets/img/téléchargement.png'
+import Stamp from '../assets/img/Untitled-1.png'
 import {connect} from 'react-redux'
 
 
@@ -10,7 +14,8 @@ const mapStateToProps = (state) => {
 
 class CinemaDate extends React.Component{
     state={
-        movie : [], 
+        movie : [],
+        isDisplayed : true
     }
 
     getMovies = () => {
@@ -20,22 +25,48 @@ class CinemaDate extends React.Component{
         .then(data => {console.log("test Api", data) || 
         this.setState({movie: data.movies[randomId]})
     })
+    
+    }
+    changeDisplay = () => {
+        setTimeout(() => {
+            this.setState({
+            isDisplayed: !this.state.isDisplayed
+          })
+        }, 4000);
          }
 
          componentDidMount(){
             this.getMovies()
+            this.changeDisplay()
          }
 
     render(){
-        console.log('props', this.props)
         return(
-            
-            <div className="cinema-ticket"> 
-            <h3>{this.state.movie.title}</h3>
-            <h3>{this.props.monster.name}</h3>
-            <img src = {this.props.monster.picture}></img>
-            <img className="movie" src={this.state.movie.posterUrl} alt={this.state.movie.title}></img>
+        <>{this.state.isDisplayed ?
+        <div className = "video_container">
+            <video autoPlay muted className="video_shining">
+                <source src={video} type="video/mp4"></source>
+            </video>
+        </div>
+        :
+        <div className="ticket_container">
+            <img className="stamp" src={Stamp}></img>
+            <img className="cinema-ticket" src={Ticket}></img>
+            <h1 className="ticket_title">Meet your date at the cinema following this ticket</h1>
+            <div className="your_match">
+                <h1 className="match_title">{this.props.monster.name}</h1>
+                <img className="monster_img" src={this.props.monster.picture}></img>
             </div>
+            <div className="your_date">
+                <h1 className="match_title">{this.state.movie.title}</h1>
+                <img className="monster_img" src={this.state.movie.posterUrl}></img>
+            </div>
+            
+        </div>
+        
+        }
+        </>  
+             
 
                 
         )
