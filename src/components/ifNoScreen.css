@@ -35,7 +35,9 @@ video {
 p{
     margin-top: 2.5vw;
 }
-
+.choice-back {
+    margin:0.6em;
+}
 .button{
     height: 3em;
     background-color: rgb(146, 10, 10);
@@ -44,9 +46,11 @@ p{
     border: none;
     padding: 1em;
     margin-top:2em;
+    text-decoration: none;
 }
 
 .button:hover{
     background-color: black;
     color: rgb(146, 10, 10);
+    border: solid 2px rgb(146, 10, 10);
 }

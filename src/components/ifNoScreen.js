@@ -14,13 +14,15 @@ class ScreenNo extends React.Component{
                 </video>
                 <div className="welcome">
                     <h1>What a pity !</h1>
-                    <p>We had a great monster to introduce you !</p>
-                    <Link
+                    <p>We had a great monster to introduce to you !</p>
+                    <div className="choice-back">
+                        <Link
                         to='/Elevator'
                         className="button"
                         type='button'>
-                        You changed your mind ?
-                    </Link>
+                        Have you changed your mind ?
+                        </Link>
+                    </div>
                 </div>
 
             </div>

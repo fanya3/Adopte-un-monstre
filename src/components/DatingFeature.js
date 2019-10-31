@@ -13,18 +13,21 @@ class DatingFeature extends React.Component{
                 <div className="welcome">
                     <h1>ADOPT A MONSTER</h1>
                     <p>Ready to try ?</p>
-                    <Link 
+                    <div className="choice">
+                        <Link 
                         to='/Elevator' 
-                        className="button"
+                        className="button-welcome"
                         type='button'>
                         YES
                     </Link>
                     <Link
                         to='/ifNoScreen'
-                        className="button"
+                        className="button-welcome"
                         type='button'>
                         NO
                     </Link>
+                    </div>
+                    
                 </div>
             </div>
         )

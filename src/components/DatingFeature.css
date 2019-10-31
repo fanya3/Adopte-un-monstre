@@ -1,5 +1,5 @@
 * {
-    box-sizing: content-box;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -26,23 +26,26 @@ video {
     text-align: center;
     padding: 50px;
     color: white;
-    font-size: 50px;
+    font-size: 5em;
 }
 
-.button {
+.choice {
+    margin:0.6em;
+}
+.button-welcome{
     width: 20vw;
     text-decoration: none;
     height: 3em;
     margin-right: 1em;
-    margin-top: 30vw;
     background-color: rgb(146, 10, 10);
     color: black;
     font-size: 0.5em;
     border: none;
-    padding: 0.7em 2.7em;
+    padding: 0.7em 3em;
 }
 
-.button:hover {
+.button-welcome:hover {
     background-color: black;
     color:rgb(146, 10, 10);
+    border: solid 2px rgb(146, 10, 10);
 }
