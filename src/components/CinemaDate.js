@@ -2,7 +2,6 @@ import React from "react"
 import './CinemaDate.css';
 import axios from 'axios'
 import video from '../assets/Video/test_4.mov'
-import Monster from '../assets/img/monster.jpg'
 import Ticket from '../assets/img/téléchargement.png'
 import Stamp from '../assets/img/Untitled-1.png'
 import { connect } from 'react-redux'
@@ -21,7 +20,7 @@ class CinemaDate extends React.Component {
 
     getMovies = () => {
         const randomId = Math.floor(Math.random() * (81))
-        axios.get(`https://hackathon-wild-hackoween.herokuapp.com/movies`)
+        axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/movies.json`)
             .then(response => response.data)
             .then(data => {
                 console.log("test Api", data) ||
