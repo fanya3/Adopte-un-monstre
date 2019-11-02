@@ -20,10 +20,11 @@
     height: 102%;
     width : auto;
     z-index: 100;
-    filter: drop-shadow(10px 10px 8px #000000);
+    filter: drop-shadow(12px 12px 10px #000000);
+    opacity: 1;
 }
 
-.elevator-hideDoors {
+/* .elevator-hideDoors {
     width: 100%;
     height : 100vh;
     display: flex;
@@ -37,7 +38,7 @@
     height : 100vh;
     background-color: black;
     z-index: 50;
-}
+} */
 
 .elevator-hideBackground {
     width: 100%;
@@ -89,28 +90,27 @@
     cursor: pointer;
     font-size: 1.3em;
     font-family: 'IM Fell DW Pica', serif;
+    border:none;
 }
 
 
 .elevator-monsters-left{
     width: auto;
-    height:470px;
-    margin-top: 28vh;
+    height: 420px;
+    margin-top: 26vh;
     margin-right: 15vw;
     position: absolute;
     z-index: 10;
-    box-shadow: inset -336px -356px 30px black;
     transition: all 2s ease-out;
 }
 
 .elevator-monsters-right{
     width: auto;
-    height: 470px;
-    margin-top: 28vh;
-    margin-left: 22vw;
+    height: 420px;
+    margin-top: 26vh;
+    margin-left: 25vw;
     position: absolute;
     z-index: 10;
-    box-shadow: inset -336px -356px 30px black;
     transition: all 2s ease-out;
 }
 
@@ -198,6 +198,7 @@
     font-family: 'IM Fell DW Pica', serif;
 }
 
+
 .elevator-description-left h1, .elevator-description-right h1 {
     font-size : 40px;
     font-family: 'IM Fell DW Pica', serif;
@@ -213,7 +214,6 @@
 .sexAppeal {
     margin-top:2em;
     font-family: 'IM Fell DW Pica', serif;
-
 }
 
 

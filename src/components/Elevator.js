@@ -20,10 +20,8 @@ class Elevator extends React.Component{
     }
 
 
-
-
     getMonsters = () => {
-        const randomId=Math.floor(Math.random() * (15))
+        const randomId = Math.floor(Math.random() * (15))
         axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/monsters.json`)
         .then(response => response.data)
         .then(data => {console.log("test Api", data) || 
@@ -32,16 +30,15 @@ class Elevator extends React.Component{
         }, 600);
         this.setState({isOpen : !this.state.isOpen});
         const son = new Audio(audio); return (son.play());
+        })
+    }
 
-    })
-         }
          _userArray() {
             const action = { type : "USER_LOADED", value : this.state.monster}
             this.props.dispatch(action)
         }
 
 
-    
 
     render(){      
         return(
@@ -52,11 +49,7 @@ class Elevator extends React.Component{
                     <input type='button' className="elevatorButton" onClick={() => this.getMonsters()} value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
-
-                <div className = "elevator-hideDoors">
-                    <div className="elevator-firstHide"></div>
-                    <div className="elevator-firstHide"></div>
-                </div>
+                
                 <div className = "elevator-hideBackground">
                     <div className="elevator-BgHide"></div>
                     <div className="elevator-BgHide"></div>
@@ -74,12 +67,12 @@ class Elevator extends React.Component{
                         <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
-                            <h3>His level of sex appeal :</h3> 
+                            <p>His level of sex appeal :</p> 
                             <h1>{this.state.monster.level}</h1>
                         </div>
                         <div className="sexAppeal">
-                            <h3>Here, you will understand why he's the one for you :</h3>
-                            <p>{this.state.monster.description}</p>
+                            <p>His/her special catchphrase :</p>
+                            <h2>{this.state.monster.description}</h2>
                         </div>
                         <Link 
                             onClick = {() => this._userArray()}
@@ -98,15 +91,15 @@ class Elevator extends React.Component{
                         <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
                     </div>
                     <div className="elevator-description-right">
-                    <p>Your potential soulmate:</p>
+                        <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
-                            <h3>His level of sex appeal :</h3> 
+                            <p>His level of sex appeal :</p> 
                             <h1>{this.state.monster.level}</h1>
                         </div>
                         <div className="sexAppeal">
-                            <h3>Here, you will understand why he's the one for you :</h3>
-                            <p>{this.state.monster.description}</p>
+                            <p>His/her special catchphrase :</p>
+                            <h2>{this.state.monster.description}</h2>
                         </div>
                         <Link 
                             onClick = {() => this._userArray()}
