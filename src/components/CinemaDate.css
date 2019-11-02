@@ -111,8 +111,8 @@ body {
     animation-duration: 0.5s;
     opacity: 1;
     -webkit-animation-fill-mode:forwards;
-     animation-fill-mode:forwards;
-     z-index:100;
+    animation-fill-mode:forwards;
+    z-index:100;
 }
   
   @-webkit-keyframes pulse{
