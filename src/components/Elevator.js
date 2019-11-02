@@ -24,7 +24,7 @@ class Elevator extends React.Component{
 
     getMonsters = () => {
         const randomId=Math.floor(Math.random() * (15))
-        axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/monsters.json`)
+        axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/monsters.json`)
         .then(response => response.data)
         .then(data => {console.log("test Api", data) || 
         setTimeout(() => {

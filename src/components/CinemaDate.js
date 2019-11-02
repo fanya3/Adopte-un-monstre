@@ -20,7 +20,7 @@ class CinemaDate extends React.Component {
 
     getMovies = () => {
         const randomId = Math.floor(Math.random() * (81))
-        axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/movies.json`)
+        axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/movies.json`)
             .then(response => response.data)
             .then(data => {
                 console.log("test Api", data) ||
