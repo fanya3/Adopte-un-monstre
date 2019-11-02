@@ -6,6 +6,7 @@ import Ticket from '../assets/img/téléchargement.png'
 import Stamp from '../assets/img/Untitled-1.png'
 import { connect } from 'react-redux'
 import audio from '../assets/Audio/inLove.mp3'
+import {Link} from 'react-router-dom'
 
 
 const mapStateToProps = (state) => {
@@ -19,20 +20,20 @@ class CinemaDate extends React.Component {
     }
 
     getMovies = () => {
-        const randomId = Math.floor(Math.random() * (81))
+        const randomId = Math.floor(Math.random() * (82))
         axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/movies.json`)
             .then(response => response.data)
             .then(data => {
                 console.log("test Api", data) ||
-                this.setState({ movie: data.movies[randomId] })
+                this.setState({ movie: data.movies[randomId] }) ||
+                console.log("state", { movie: data.movies[randomId] })
             })
 
     }
     changeDisplay = () => {
         setTimeout(() => {
             this.setState({
-                isDisplayed: !this.state.isDisplayed
-            })
+                isDisplayed: !this.state.isDisplayed})
         }, 4000);
     }
 
@@ -58,21 +59,27 @@ class CinemaDate extends React.Component {
                         </audio>
                     </div>
                     :
-                    <div className="ticket_container">
-                        <img className="stamp" src={Stamp}></img>
-                        <img className="cinema-ticket" src={Ticket}></img>
-                        <h1 className="ticket_title">Meet your date at the cinema following this ticket</h1>
-                        <div className="your_match">
-                            <h1 className="match_title">{this.props.monster.name}</h1>
-                            <img className="monster_img" src={this.props.monster.picture}></img>
+                    <div>
+                        <div className="ticket_container">
+                            <img className="stamp" src={Stamp}></img>
+                            <img className="cinema-ticket" src={Ticket}></img>
+                            <h1 className="ticket_title">Meet your date at the cinema following this ticket</h1>
+                            <div className="your_match">
+                                <h1 className="match_title">{this.props.monster.name}</h1>
+                                <img className="monster_img" src={this.props.monster.picture}></img>
+                            </div>
+                            <div className="your_date">
+                                <h1 className="match_title">{this.state.movie.title}</h1>
+                                <img className="monster_img" src={this.state.movie.posterUrl}></img>
+                            </div>   
                         </div>
-                        <div className="your_date">
-                            <h1 className="match_title">{this.state.movie.title}</h1>
-                            <img className="monster_img" src={this.state.movie.posterUrl}></img>
-                        </div>
-
+                            <Link
+                            to='/Elevator'
+                            className="last-return"
+                            type='button'>
+                            WANT A NEW DATE ?
+                            </Link>
                     </div>
-
                 }
             </>
 
