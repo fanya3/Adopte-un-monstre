@@ -8,7 +8,7 @@
             "defense": 8,
             "special": "First Strike",
             "description": "May God have mercy on your soul!",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Annabel.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Annabel.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -20,7 +20,7 @@
             "defense": 8,
             "special": "Nothing special",
             "description": "I want your children!",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/La-Llorona.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/La-Llorona.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -32,7 +32,7 @@
             "defense": 4,
             "special": "Nothing special",
             "description": "Aha, I'll drive you crazy, and I'll kill you all!",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Pennywise.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Pennywise.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },     
@@ -44,7 +44,7 @@
             "defense": 4,
             "special": "Flying",
             "description": "... Maybe you should run ...",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Scream.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Scream.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -56,7 +56,7 @@
             "defense": 16,
             "special": "Defenser",
             "description": "Before you die, you see",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/The-Ring.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/The-Ring.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -68,7 +68,7 @@
             "defense": 4,
             "special": "Haste",
             "description": "I've Always Had A Thing for The Whores That Live in This House",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Freddy-Krueger.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Freddy-Krueger.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -80,7 +80,7 @@
             "defense": 20,
             "special": "Nothing special",
             "description": "Kill them Jason, kill them for mommy",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Jason-Voorhees.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Jason-Voorhees.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -92,7 +92,7 @@
             "defense": 12,
             "special": "Nothing special",
             "description": "Your bones will be crushed to dust",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Billy.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Billy.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -104,7 +104,7 @@
             "defense": 8,
             "special": "haste",
             "description": "If you've got a taste for terror... take Carrie to the prom.",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Carrie.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Carrie.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -116,7 +116,7 @@
             "defense": 12,
             "special": "flying ",
             "description": "Give me the boy, and I'll let you live!",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Chucky.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Chucky.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -128,7 +128,7 @@
             "defense": 4,
             "special": "first strike",
             "description": "I'll tear your soul apart.",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Hell-Raiser.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Hell-Raiser.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -140,7 +140,7 @@
             "defense": 12,
             "special": "life-link",
             "description": "You failed. Just as you have failed everyone in your life.",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/The-Nun.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/The-Nun.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -152,7 +152,7 @@
             "defense": 8,
             "special": "Nothing special",
             "description": "Guns don't kill people, Leatherface kills people.",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Leatherface.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Leatherface.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -164,7 +164,7 @@
             "defense": 16,
             "special": "Tremble",
             "description": "Call me by my dream name. Call me!",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Regan-MacNeil.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Regan-MacNeil.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         },
@@ -176,7 +176,7 @@
             "defense": 16,
             "special": "flying life-link",
             "description": "I'm not gonna hurt you. I'm just gonna bash your brains in",
-            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/homepage/src/assets/API/Jack-Torrance.jpg",
+            "picture": "https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/Jack-Torrance.jpg",
             "createdAt": "2019-10-27T08:55:47.459Z",
             "updatedAt": "2019-10-27T08:55:47.459Z"
         }
