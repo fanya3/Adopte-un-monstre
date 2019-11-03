@@ -20,6 +20,9 @@ class Elevator extends React.Component{
     }
 
 
+    openAllDoors = () => {
+        document.getElementById("defaultDoors").style.opacity = 0;
+      }
 
 
     getMonsters = () => {
@@ -34,34 +37,31 @@ class Elevator extends React.Component{
         const son = new Audio(audio); return (son.play());
 
     })
-         }
-         _userArray() {
-            const action = { type : "USER_LOADED", value : this.state.monster}
-            this.props.dispatch(action)
-        }
+    }
 
+    _userArray = () => {
+        const action = { type : "USER_LOADED", value : this.state.monster}
+        this.props.dispatch(action)
+    }
 
     
-
     render(){      
         return(
             
             <div className="elevator-container"> 
                 <img className="elevator-background" src={back}></img>
                 <div className="text-intro">
-                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters()} value="NEXT"></input>
+                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters() || this.openAllDoors() } value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
-                </div>
-
-                <div className = "elevator-hideDoors">
-                    <div className="elevator-firstHide"></div>
-                    <div className="elevator-firstHide"></div>
                 </div>
                 <div className = "elevator-hideBackground">
                     <div className="elevator-BgHide"></div>
                     <div className="elevator-BgHide"></div>
                 </div>
-                
+                <div id= "defaultDoors">
+                    <div className="elm sliding-door left"></div>
+                    <div className="elm sliding-door right "></div>
+                </div>
                 <>
                     { this.state.isOpen ?
                     <>
