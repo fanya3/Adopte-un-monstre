@@ -24,6 +24,13 @@ class Elevator extends React.Component{
         document.getElementById("defaultDoors").style.opacity = 0;
       }
 
+    showDescriptions = () => {
+        { this.state.isOpen ?
+           document.getElementById("elevator-description-left").style.opacity = 1 :
+           document.getElementById("elevator-description-right").style.opacity = 1
+        }
+    }
+
 
     getMonsters = () => {
         const randomId=Math.floor(Math.random() * (19))
@@ -33,7 +40,7 @@ class Elevator extends React.Component{
         setTimeout(() => {
             this.setState({monster: data.monsters[randomId]})
         }, 600);
-        this.setState({isOpen : !this.state.isOpen});
+        this.setState({isOpen : !this.state.isOpen});    
         const son = new Audio(audio); return (son.play());
 
     })
@@ -45,13 +52,14 @@ class Elevator extends React.Component{
     }
 
     
+
     render(){      
         return(
             
             <div className="elevator-container"> 
                 <img className="elevator-background" src={back}></img>
                 <div className="text-intro">
-                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters() || this.openAllDoors() } value="NEXT"></input>
+                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters() || this.openAllDoors() || this.showDescriptions() } value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
                 <div className = "elevator-hideBackground">
@@ -70,7 +78,7 @@ class Elevator extends React.Component{
                         <div className="elm sliding-door right "></div>
                         <img className="elevator-monsters-left" src={this.state.monster.picture} ></img> 
                     </div>
-                    <div className="elevator-description-left">
+                    <div id="elevator-description-left">
                         <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
@@ -97,7 +105,7 @@ class Elevator extends React.Component{
                         <div className="elm sliding-door right opened"></div>
                         <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
                     </div>
-                    <div className="elevator-description-right">
+                    <div id="elevator-description-right">
                     <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">

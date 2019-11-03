@@ -122,7 +122,7 @@
 }
 
 
-d
+
 .left {
 	left: 0;
 }
@@ -132,7 +132,7 @@ d
 
 .sliding-door.left.opened {
 	left: -40vh;
-	transition: left 2s ease-in-out;
+	transition: right 2s ease-in-out;
 }
 .sliding-door.right.opened {
 	right: -40vh;
@@ -153,7 +153,7 @@ d
 
 /* -------- Description slides -------- */
 
-.elevator-description-left {
+#elevator-description-right {
     position : absolute;
     display: flex;
     flex-direction: column;
@@ -169,9 +169,10 @@ d
     right : 17vh;
     top : 17vh;
     font-family: 'IM Fell DW Pica', serif;
+    opacity:0;
 }
 
-.elevator-description-right {
+#elevator-description-left {
     position : absolute;
     display: flex;
     flex-direction: column;
@@ -187,15 +188,16 @@ d
     left : 16vh;
     top : 17vh;
     font-family: 'IM Fell DW Pica', serif;
+    opacity:0;
 }
 
-.elevator-description-left h1, .elevator-description-right h1 {
+#elevator-description-left h1,#elevator-description-right h1 {
     font-size : 40px;
     font-family: 'IM Fell DW Pica', serif;
 }
 
 
-.elevator-description-left p, .elevator-description-right p{
+#elevator-description-left p, #elevator-description-right p{
  font-size:16px;
  margin:0;
  font-family: 'IM Fell DW Pica', serif;
