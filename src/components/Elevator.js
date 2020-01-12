@@ -20,6 +20,18 @@ class Elevator extends React.Component{
     }
 
 
+    openAllDoors = () => {
+        document.getElementById("defaultDoors").style.opacity = 0;
+      }
+
+    showDescriptions = () => {
+        { this.state.isOpen ?
+           document.getElementById("elevator-description-left").style.opacity = 1 :
+           document.getElementById("elevator-description-right").style.opacity = 1
+        }
+    }
+
+
     getMonsters = () => {
         const randomId = Math.floor(Math.random() * (15))
         axios.get(`https://raw.githubusercontent.com/fanya3/Adopte-un-monstre/newApi/src/assets/API/monsters.json`)
@@ -28,16 +40,17 @@ class Elevator extends React.Component{
         setTimeout(() => {
             this.setState({monster: data.monsters[randomId]})
         }, 600);
-        this.setState({isOpen : !this.state.isOpen});
+        this.setState({isOpen : !this.state.isOpen});    
         const son = new Audio(audio); return (son.play());
         })
     }
 
-         _userArray() {
-            const action = { type : "USER_LOADED", value : this.state.monster}
-            this.props.dispatch(action)
-        }
 
+
+    _userArray = () => {
+        const action = { type : "USER_LOADED", value : this.state.monster}
+        this.props.dispatch(action)
+    }
 
 
     render(){      
@@ -46,7 +59,7 @@ class Elevator extends React.Component{
             <div className="elevator-container"> 
                 <img className="elevator-background" src={back}></img>
                 <div className="text-intro">
-                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters()} value="NEXT"></input>
+                    <input type='button' className="elevatorButton" onClick={() => this.getMonsters() || this.openAllDoors() || this.showDescriptions() } value="NEXT"></input>
                     <h3> Click on the button to find your soul mate!</h3>
                 </div>
                 
@@ -54,7 +67,10 @@ class Elevator extends React.Component{
                     <div className="elevator-BgHide"></div>
                     <div className="elevator-BgHide"></div>
                 </div>
-                
+                <div id= "defaultDoors">
+                    <div className="elm sliding-door left"></div>
+                    <div className="elm sliding-door right "></div>
+                </div>
                 <>
                     { this.state.isOpen ?
                     <>
@@ -63,7 +79,7 @@ class Elevator extends React.Component{
                         <div className="elm sliding-door right "></div>
                         <img className="elevator-monsters-left" src={this.state.monster.picture} ></img> 
                     </div>
-                    <div className="elevator-description-left">
+                    <div id="elevator-description-left">
                         <p>Your potential soulmate:</p>
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
@@ -90,8 +106,10 @@ class Elevator extends React.Component{
                         <div className="elm sliding-door right opened"></div>
                         <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
                     </div>
-                    <div className="elevator-description-right">
+                    {/* <div className="elevator-description-right">
                         <p>Your potential soulmate:</p>
+                    <div id="elevator-description-right">
+                    <p>Your potential soulmate:</p> */}
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
                             <p>His level of sex appeal :</p> 
