@@ -1,0 +1,179 @@
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+@import url( "https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica&display=swap" );
+
+body {
+background-color : black;
+}
+
+.video_container {
+  position: fixed; 
+  background-color: black;
+  display: flex;
+  height : 100vh;
+  width : 100%;
+}
+
+.video_shining {
+  height : 30%;
+  z-index: 0;
+}
+
+.cinema-ticket {
+  position: fixed; 
+  z-index: 5;
+  width : 140vh;
+  
+}
+
+.ticket_container{
+  height : 100%;
+  margin-left : 25vh;
+  margin-top:12vh;
+  position: fixed;
+  transform: rotate(15deg);
+  width : 100%;
+  z-index: -10;
+}
+
+.ticket_title {
+  font-family: 'IM Fell DW Pica', serif;
+  background-color: transparent;
+  color :black;
+  margin-left : 22vh;
+  margin-top : 16vh;
+  position :absolute;
+  z-index : 10;
+}
+
+.match_title {
+  font-size : 2em;
+  font-family: 'IM Fell DW Pica', serif;
+  background-color: transparent;
+  color : black;
+  z-index: 10;
+}
+
+.monster_img {
+  height : auto;
+  width : 50%;
+  z-index : 10;   
+}
+
+.your_match {
+  font-family: 'IM Fell DW Pica', serif;
+  margin-left:30vh;
+  margin-top:25vh;
+  position : absolute;
+  background-color: transparent;
+  display : flex;
+  flex-direction :column;
+  align-items : center;
+  width : 40vh;
+  height : 60vh;
+  z-index : 10
+}
+.your_date {
+  font-family: 'IM Fell DW Pica', serif;
+  margin-left:70vh;
+  margin-top:25vh;
+  position : absolute;
+  background-color: transparent;
+  display : flex;
+  flex-direction :column;
+  align-items : center;
+  width : 40vh;
+  height : 60vh;
+  z-index : 10
+}
+
+/* ------- stamp -------- */
+
+.stamp{
+transform: rotate(-40deg);
+  height:500px;
+  background-color : transparent;
+  position: absolute;
+  top:35%;
+  left:29%;
+  width:500px;
+  border-radius:5px;
+  z-index:300;
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+  animation-delay:10s;
+  -webkit-animation-delay:2.5s;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+  opacity: 1;
+  -webkit-animation-fill-mode:forwards;
+   animation-fill-mode:forwards;
+   z-index:100;
+}
+
+@-webkit-keyframes pulse{
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity:.50;
+    transform-origin: 50% 50%;
+    transform: rotate(-2deg) scale(5);
+    transition: all .3s cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  }
+  100%{
+    opacity:1;
+    transform: rotate(-15deg) scale(1);
+  }
+}
+
+/* ------- blur effect ------- */
+
+.elevator-hideBackground {
+  width: 100%;
+  height : 112vh;
+  display: flex;
+  justify-content:space-between;
+  z-index:110;
+  position:absolute;
+  overflow: hidden;
+  top:-12vh;
+}
+
+
+.elevator-BgHide {
+  width: 19%;
+  height : 200vh;
+  background-color:#000;
+  z-index: 110;
+  filter: blur(3rem);
+}
+
+
+
+.last-return {
+position : fixed;
+text-decoration: none;
+bottom:3em;
+left: 3.5em;
+background-color:
+rgb(146, 10, 10);
+color:black;
+font-size: 1.3em;
+border: none;
+padding: 0.7em 3em;
+font-family: 'IM Fell DW Pica', serif;
+}
+
+.last-return:hover {
+background-color: black;
+color: rgb(146, 10, 10);
+border: solid 2px rgb(146, 10, 10);
+}
+
+
+
