@@ -39,7 +39,7 @@ class Elevator extends React.Component{
         .then(data => {console.log("test Api", data) || 
         setTimeout(() => {
             this.setState({monster: data.monsters[randomId]})
-        }, 600);
+        }, 300);
         this.setState({isOpen : !this.state.isOpen});    
         const son = new Audio(audio); return (son.play());
         })
@@ -106,10 +106,9 @@ class Elevator extends React.Component{
                         <div className="elm sliding-door right opened"></div>
                         <img className="elevator-monsters-right" src={this.state.monster.picture} ></img>
                     </div>
-                    {/* <div className="elevator-description-right">
-                        <p>Your potential soulmate:</p>
+                   
                     <div id="elevator-description-right">
-                    <p>Your potential soulmate:</p> */}
+                    <p>Your potential soulmate:</p> 
                         <h1>{this.state.monster.name}</h1>
                         <div className="sexAppeal">
                             <p>His level of sex appeal :</p> 

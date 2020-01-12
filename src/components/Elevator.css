@@ -148,11 +148,11 @@
 
 .sliding-door.left.opened {
 	left: -40vh;
-	transition: right 2s ease-in-out;
+	transition: right 1.2s ease-in-out;
 }
 .sliding-door.right.opened {
 	right: -40vh;
-	transition: right 2s ease-in-out;
+	transition: right 1.2s ease-in-out;
 }
 
 #defaultDoors {
@@ -161,7 +161,7 @@
     width: 80vh;
     height: 100vh;
     opacity: 1;
-    transition: all 2s linear;
+    transition: all 3s linear;
 }
 
 
@@ -208,7 +208,7 @@
 }
 
 
-.elevator-description-left h1, .elevator-description-right h1 {
+#elevator-description-left h1, #elevator-description-right h1 {
     font-size : 40px;
     font-family: 'IM Fell DW Pica', serif;
 }
